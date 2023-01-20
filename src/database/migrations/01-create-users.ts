@@ -7,26 +7,26 @@ export default {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       displayName: {
         allowNull: false,
         type: Sequelize.STRING,
-        field: 'display_name',
+        field: 'display_name'
       },
       email: {
         allowNull: false,
         type: Sequelize.STRING,
-        unique: true,
+        unique: true
       },
       password: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       image: {
         allowNull: true,
-        type: Sequelize.STRING,
-      },
+        type: Sequelize.STRING
+      }
     });
-  },
-}
+  }
+};

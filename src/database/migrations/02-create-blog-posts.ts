@@ -7,34 +7,34 @@ export default {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
       },
       title: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       content: {
         allowNull: false,
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
       },
       userId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         field: 'user_id',
-        references: { model: 'users', key: 'id' },
+        references: { model: 'users', key: 'id' }
       },
       published: {
         allowNull: false,
-        type: Sequelize.DATE,
+        type: Sequelize.DATE
       },
       updated: {
         allowNull: false,
-        type: Sequelize.DATE,
-      },
+        type: Sequelize.DATE
+      }
     });
   },
 
   async down(queryInterface: QueryInterface) {
     await queryInterface.dropTable('blog_posts');
   }
-}
+};
